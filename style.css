@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  --Light-green: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(218, 23%, 38%);
+  --dk-grayish-blue: hsl(217, 19%, 24%);
+  --dk-blue: hsl(218, 23%, 16%);
+  --font-quote: 28px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--dk-blue);
+  color: var(--Light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+}
+.card {
+  background-color: var(--dk-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  width: 500px;
+
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 10px;
+}
+.advice-info {
+  color: var(--neon-green);
+}
+
+.advice-text {
+  font-size: var(--font-quote);
+  text-align: center;
+}
+.divider {
+  margin: 1rem 0 2rem 0;
+}
+.circle {
+  position: absolute;
+  bottom: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  height: 50px;
+  aspect-ratio: 1;
+  transition: 300ms ease-in-out;
+}
+.circle:hover {
+  box-shadow: 0 0 20px var(--neon-green);
+  cursor: pointer;
+}
+.rotate {
+  transform: rotate(720deg);
+}
