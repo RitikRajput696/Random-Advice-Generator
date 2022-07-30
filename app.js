@@ -1,18 +1,19 @@
-const fetchAdvice = async () => {
-  const res = await fetch("https://api.adviceslip.com/advice");
-  const data = await res.json();
+async function getAdvice() {
+  const response = await fetch("https://api.adviceslip.com/advice");
+  const data = await response.json();
+
+  const advice = await data.slip.advice;
+  const id = await data.slip.id;
+  console.log(advice);
+  console.log(id);
 
   document.querySelector("#advice-id").innerHTML = `ADVICE #${data.slip.id}`;
-  document.querySelector(".advice-text").innerHTML = `"${data.slip.advice}"`;
-};
+  document.querySelector("#advice-text").innerHTML = `"${data.slip.advice}"`;
+}
 
-const btn = document.querySelector(".circle");
-btn.addEventListener("click", function () {
-  fetchAdvice();
-  btn.classList.add("rotate");
+document.querySelector(".circle").addEventListener("click", () => {
+  document.querySelector(".circle").classList.add("rotate");
   setInterval(() => {
-    btn.classList.remove("rotate");
-  }, 1000);
+    document.querySelector(".circle").classList.remove("rotate");
+  }, 210);
 });
-
-fetchAdvice();

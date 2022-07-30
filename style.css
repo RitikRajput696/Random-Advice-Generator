@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
 :root {
   --Light-green: hsl(193, 38%, 86%);
   --neon-green: hsl(150, 100%, 66%);
@@ -7,6 +8,7 @@
   --dk-blue: hsl(218, 23%, 16%);
   --font-quote: 28px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +24,7 @@ body {
   justify-content: center;
   font-family: "Manrope", sans-serif;
 }
+
 .card {
   background-color: var(--dk-grayish-blue);
   display: flex;
@@ -35,6 +38,7 @@ body {
   gap: 1rem;
   border-radius: 10px;
 }
+
 .advice-info {
   color: var(--neon-green);
 }
@@ -43,9 +47,11 @@ body {
   font-size: var(--font-quote);
   text-align: center;
 }
+
 .divider {
   margin: 1rem 0 2rem 0;
 }
+
 .circle {
   position: absolute;
   bottom: -25px;
@@ -56,12 +62,14 @@ body {
   border-radius: 50%;
   height: 50px;
   aspect-ratio: 1;
-  transition: 300ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
+
 .circle:hover {
   box-shadow: 0 0 20px var(--neon-green);
   cursor: pointer;
 }
+
 .rotate {
-  transform: rotate(720deg);
+  transform: rotate(120deg);
 }
